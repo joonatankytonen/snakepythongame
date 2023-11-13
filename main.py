@@ -24,7 +24,6 @@ top=pygame.Rect(250,250,500,2)
 right=pygame.Rect(750, 250, 2, 500)
 bottom=pygame.Rect(250, 750, 500, 2)
 
-
 # Game starts
 while running:
     # If "X" is pressed the game Quits
@@ -55,6 +54,7 @@ while running:
     elif keys[pygame.K_d]:
         snake.move_ip(1,0)
 
+    # Collision with borders
     if snake.colliderect(left):
         running = False
     elif snake.colliderect(top):
